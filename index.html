@@ -1,15 +1,14 @@
 <!doctype html>
 <html lang="en">
   <head>
+<link rel="icon" href="icon.png">
 
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
 
 
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
@@ -45,6 +44,11 @@ function shuffle(array) {
 
 
 function submit() {
+
+
+
+    
+
   var index;
 var text=[];
   var checkedVals = $('.aman:checkbox:checked').map(function() {
@@ -68,55 +72,89 @@ console.log(shuffle(text));
   var html = '<table class="table table-bordered"> <thead><tr><th scope="col" align=" center ">Shuffled Words</th></tr></thead><tbody>';
 
   $.each(words, function(i, word) {
-    html += '<tr ><td>' + word + '</td></tr>';
+    html += '<tr><td>' + word + '</td></tr>';
   });
 
   html += '  </tbody></table>';
+if($("#divResults").length){
+      $('#divResults').empty();
 
   $("#divResults").append(html);
 
+}else{
+      $("#divResults").append(html);
+
+}
 
 }
 
 
 
 
+
+
+
 </script>
 
-    <title>Vocab</title>
+    <title>Vocabulary Builder</title>
   </head>
   <body><center>
-    <h1>Hello, world!</h1>
-<label class="checkbox-inline"><td><input class="aman" type="checkbox" value="Birth n death">Birth n death </label></td>
-<label class="checkbox-inline"><input class="aman" type="checkbox" value="Body n disease-1">Body n disease-1 </label>
-<label class="checkbox-inline"><input class="aman" type="checkbox" value="Body n disease-2">Body n disease-2 </label>
-<label class="checkbox-inline"><input class="aman" type="checkbox" value="Beautiful mind-1">Beautiful mind-1 </label>
-<label class="checkbox-inline"><input class="aman" type="checkbox" value="Beautiful mind-2">Beautiful mind-2 </label><br>
-<label class="checkbox-inline"><input class="aman" type="checkbox" value="Shabd -1">Shabd -1 </label>
-<label class="checkbox-inline"><input class="aman" type="checkbox" value="Shabd -2">Shabd -2</label>
-<label class="checkbox-inline"><input class="aman" type="checkbox" value="Religion">Religion</label>
-<label class="checkbox-inline"><input class="aman" type="checkbox" value="Rajneeti -1">Rajneeti -1</label>
-<label class="checkbox-inline"><input class="aman" type="checkbox" value="Rajneeti-2">Rajneeti -2</label><br>
-<label class="checkbox-inline"><input class="aman" type="checkbox" value="Office office-1">Office office-1</label>
-<label class="checkbox-inline"><input class="aman" type="checkbox" value="Office office-2">Office office-2</label>
-<label class="checkbox-inline"><input class="aman" type="checkbox" value="Money matters">Money matters</label>
-<label class="checkbox-inline"><input class="aman" type="checkbox" value="Size matters">OSize matters</label>
-<label class="checkbox-inline"><input class="aman" type="checkbox" value="50 shades of joy">50 shades of joy</label><br>
-<label class="checkbox-inline"><input class="aman" type="checkbox" value="Criticism n praise">Criticism n praise</label>
-<label class="checkbox-inline"><input class="aman" type="checkbox" value="Crime n punishment">Crime n punishment</label>
-<label class="checkbox-inline"><input class="aman" type="checkbox" value="War n peace">War n peace</label>
-<label class="checkbox-inline"><input class="aman" type="checkbox" value="Anger kills">Anger kills</label>
-<label class="checkbox-inline"><input class="aman" type="checkbox" value="LSD -1">LSD -1</label><br>
-<label class="checkbox-inline"><input class="aman" type="checkbox" value="LSD-2">LSD-2</label>
-<label class="checkbox-inline"><input class="aman" type="checkbox" value="Food,clothing n shelter">Food,clothing n shelter</label>
-<label class="checkbox-inline"><input class="aman" type="checkbox" value="Break n brake">Break n brake</label>
-<label class="checkbox-inline"><input class="aman" type="checkbox" value="A Walk through clouds">A Walk through clouds</label>
-<label class="checkbox-inline"><input class="aman" type="checkbox" value="Time flies">Time flies</label><br>
+    <h1>Vocabulary List!!</h1>
+<br>
+<br>
+
+
+<table class="table table-borderless" align="center">
+  
+  <tbody>
+    <tr>
+<td><label class="checkbox-inline"><input class="aman" type="checkbox" value="Birth n death">Birth n death </label></td>
+<td><label class="checkbox-inline"><input class="aman" type="checkbox" value="Body n disease-1">Body n disease-1 </label></td>
+<td><label class="checkbox-inline"><input class="aman" type="checkbox" value="Body n disease-2">Body n disease-2 </label></td>
+<td><label class="checkbox-inline"><input class="aman" type="checkbox" value="Beautiful mind-1">Beautiful mind-1 </label></td>
+<td><label class="checkbox-inline"><input class="aman" type="checkbox" value="Beautiful mind-2">Beautiful mind-2 </label></td>
+    </tr>
+
+
+    <tr>
+      <td><label class="checkbox-inline"><input class="aman" type="checkbox" value="Shabd -1">Shabd -1 </label></td>
+<td><label class="checkbox-inline"><input class="aman" type="checkbox" value="Shabd -2">Shabd -2</label></td>
+<td><label class="checkbox-inline"><input class="aman" type="checkbox" value="Religion">Religion</label></td>
+<td><label class="checkbox-inline"><input class="aman" type="checkbox" value="Rajneeti -1">Rajneeti -1</label></td>
+<td><label class="checkbox-inline"><input class="aman" type="checkbox" value="Rajneeti-2">Rajneeti -2</label></td>
+      </tr>
+    <tr>
+     <td><label class="checkbox-inline"><input class="aman" type="checkbox" value="Office office-1">Office office-1</label></td>
+<td><label class="checkbox-inline"><input class="aman" type="checkbox" value="Office office-2">Office office-2</label></td>
+<td><label class="checkbox-inline"><input class="aman" type="checkbox" value="Money matters">Money matters</label></td>
+<td><label class="checkbox-inline"><input class="aman" type="checkbox" value="Size matters">Size matters</label></td>
+<td><label class="checkbox-inline"><input class="aman" type="checkbox" value="50 shades of joy">50 shades of joy</label></td>
+    </tr>
+    <tr>
+     <td><label class="checkbox-inline"><input class="aman" type="checkbox" value="Criticism n praise">Criticism n praise</label></td>
+<td><label class="checkbox-inline"><input class="aman" type="checkbox" value="Crime n punishment">Crime n punishment</label></td>
+<td><label class="checkbox-inline"><input class="aman" type="checkbox" value="War n peace">War n peace</label></td>
+<td><label class="checkbox-inline"><input class="aman" type="checkbox" value="Anger kills">Anger kills</label></td>
+<td><label class="checkbox-inline"><input class="aman" type="checkbox" value="LSD -1">LSD -1</label></td>
+    </tr>
+    <tr>
+     <td><label class="checkbox-inline"><input class="aman" type="checkbox" value="LSD-2">LSD-2</label></td>
+<td><label class="checkbox-inline"><input class="aman" type="checkbox" value="Food,clothing n shelter">Food,clothing n shelter</label></td>
+<td><label class="checkbox-inline"><input class="aman" type="checkbox" value="Break n brake">Break n brake</label></td>
+<td><label class="checkbox-inline"><input class="aman" type="checkbox" value="A Walk through clouds">A Walk through clouds</label></td>
+<td><label class="checkbox-inline"><input class="aman" type="checkbox" value="Time flies">Time flies</label></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<br>
+<br>
 
 
 <button type="button" class="btn btn-outline-danger" onclick="submit()">Submit</button>
  <div id="divResults">
-    </div>
+</div>
 </center>
     
     
