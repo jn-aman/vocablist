@@ -68,14 +68,13 @@ console.log(shuffle(text));
 
   var words = text;
 
-  var html = '<a href="#" class="list-group-item list-group-item-action active">Shuffled Words</a>';
-  $.each(words, function(i, word) {
-  	var z='https://www.google.com/search?hl=en&q=Dictionary#dobs='+ word +" ";
+  var html = '<table class="table table-bordered">  <thead><tr><th scope="col" align=" center "> Shuffled Words</th></tr></thead><tbody>';
 
-    html += '<a href='+ z + '\, class="list-group-item list-group-item-action">'+ word+ '</a>';
+  $.each(words, function(i, word) {
+    html += '<tr><td>' + word + '</td></tr>';
   });
 
-  
+  html += '  </tbody></table>';
 if($("#divResults").length){
       $('#divResults').empty();
 
@@ -153,7 +152,7 @@ if($("#divResults").length){
 
 <button type="button" class="btn btn-outline-danger" onclick="submit()"> Get Words</button><br><br>
 <br>
- <div id="divResults" class="list-group"> 
+ <div id="divResults"> 
 </div>
 </center>
     
