@@ -70,8 +70,8 @@ console.log(shuffle(text));
 
   var html = '<a href="#" class="list-group-item list-group-item-action active">Shuffled Words</a>';
   $.each(words, function(i, word) {
-  	var z='https://www.google.com/search?hl=en&q=Dictionary#dobs='+ word +" ";
-
+  	// var z='https://www.google.com/search?hl=en&q=Dictionary#dobs='+ word +" ";
+var z='https://www.google.com/#q='+ word +" ";
     html += '<a href='+ z + '\, class="list-group-item list-group-item-action">'+ word+ '</a>';
   });
 
